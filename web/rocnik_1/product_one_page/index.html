@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Lenovo</title>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav id="nvbr">
+      <ul>
+        <li id="mainbtn" class="active"><a onclick="divLink('main')">Úvod</a></li>
+        <li id="performancebtn"><a onclick="divLink('gaming')">Výkon</a></li>
+        <li id="statsbtn"><a onclick="divLink('graph')">Statistiky</a></li>
+        <li id="coolingbtn"><a onclick="divLink('cooling')">Chlazení</a></li>
+        <li id="displaybtn"><a onclick="divLink('display')">Displej</a></li>
+        <li id="soundbtn"><a onclick="divLink('sound')">Zvuk</a></li>
+        <li id="connectivitybtn"><a onclick="divLink('connectivity')">Porty</a></li>
+        <li id="buy-sectionbtn"><a onclick="divLink('buy-section')">Koupit</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <div id="main" class="box column imp">
+      <img src="main-background.webp" class="background" alt="">
+      <div id="title">
+        <h1>Legion Pro 7 Gen 8</h1>
+        <h2 id="small">Průlom v oblasti notebooků</h2>
+        <div class="row">
+          <a class="buy-button" onclick="divLink('buy-section')">Koupit</a>
+          <a class="more" onclick="divLink('gaming')">Zjistit více</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div id="performance" class="imp column">
+        <div id="gaming" class="box column">
+          <img src="gaming.webp" alt="">
+          <h2>Plně výkonná grafika NVIDIA® GeForce RTX™</h2>
+          <p>Pro hráče a tvůrce je grafika NVIDIA® GeForce RTX™ 40 ideální volbou. Jsou poháněny mimořádně účinnou architekturou NVIDIA Ada Lovelace, která přináší obrovský skok ve výkonu i grafice s umělou inteligencí. Zažijte realistické virtuální světy s ray tracingem a hraním s ultra vysokým FPS s nejnižší latencí. Objevte nové revoluční způsoby tvorby a bezprecedentní zrychlení pracovních postupů.</p>
+        </div>
+        <div id="processor" class="box" data-inviewport="gradient">
+          <img src="amd_ryzen_5_logo.webp" alt="ryzen5">
+          <div class="column">
+            <h2>Neuvěřitelný výkon s umělou inteligencí</h2>
+            <p>Herní notebook Legion Pro 7 Gen 8 (16" AMD) poháněný procesory AMD Ryzen™ vám poskytuje ohromný výkon pro hry, přehrávání a tvorbu, aniž by byla ohrožena výdrž baterie. Díky nejmodernějšímu čipu LA2-Q AI Legion Pro 7 Gen 8 je Lenovo Legion AI Engine+ chytřejší než kdy předtím. Využívá řadu systémových senzorů napříč klíčovými komponenty v reálném čase a zapojuje Smart Engine pro optimalizaci vaší hry pro maximální FPS. Smart Engine se navíc postupem času zlepšuje a zajišťuje maximální výkon systému pro výhru v každé herní bitvě.</p>
+          </div>
+        </div>
+        <div id="battery-section" class="center row">
+          <div id="battery" class="box column">
+            <h3>Ohromující výdrž a nabíjení</h3>
+            <div id="battery-fill" data-inviewport="fill"></div>
+            <div id="batteryup"></div>
+          </div>
+          <div id="battery-text">
+            <p>Herní notebook Legion Pro 7 Gen 8 vám poskytne ohromující kapacitu baterie, až neuvěřitelných 99,99 Wh. Díky funkci Super Rapid Charge se baterie dobije během několika minut a Smart Battery v3.0 využívá strojové učení k úspoře kapacity baterie a snížení jejího poškození.</p>
+          </div>
+        </div>
+      </div>
+      <div id="stats" class="imp column">
+        <div id="top-side" class="row">
+          <div id="graph" class="box column">
+            <h3>Rychlost oproti konkurenci</h3>
+            <div class="column">
+              <p>Lenovo Legion 7 Pro</p>
+              <div class="line first"></div>
+            </div>
+            <div class="column">
+              <p>Lenovo Legion 7</p>
+              <div class="line" style="width: 70%"></div>
+            </div>
+            <div class="column">
+              <p>Razer Blade 15</p>
+              <div class="line" style="width: 54%"></div>
+            </div>
+            <div class="column">
+              <p>Lenovo Legion 5</p>
+              <div class="line" style="width: 46%"></div>
+            </div>
+            <div class="column">
+              <p>Asus ROG Zephyrus G14</p>
+              <div class="line" style="width: 25%"></div>
+            </div>
+            <div class="column">
+              <p>MacBook Pro M2</p>
+              <div class="line" style="width: 2%"></div>
+            </div>
+          </div>
+          <div id="rgb-box" class="column">
+            <div id="rgb" class="column box"></div>
+            <h3 id="rgbtext" class="box">Dechberoucí osvětlení</h3>
+          </div>
+        </div>
+      </div>
+      <div id="cooling" class="box imp column">
+        <h2>Legion Coldfront 5.0</h2>
+        <p>Nejlepší chladící technologie vyladěná pomocí umělé inteligence ve své třídě</p>
+        <div class="row">
+          <p><span>4</span> větráky</p>
+          <p><span>0,1</span> mm lopatky</p>
+          <p><span>4</span> trubice</p>
+        </div>
+        <img src="cooling.webp" data-inviewport="slide-right" alt="">
+      </div>
+      <div id="display" class="box imp">
+        <div class="row">
+          <div class="pointers1" data-inviewport="fade-in">
+            <p>16" IPS displej</p>
+            <p>Rozlišení 2560×1600</p>
+            <p>500 nitů</p>
+          </div>
+          <img src="laptop.webp" alt="">
+          <div class="pointers2" data-inviewport="fade-in">
+            <p>Variabilních 240Hz</p>
+            <p>3ms odezva</p>
+            <p>100% SRGB</p>
+          </div>
+        </div>
+      </div>
+      <div id="sound" class="box imp row">
+        <div class="column">
+          <h2>Zvuk kolem tebe</h2>
+          <p>Nahimic Audio od SteelSeries, speciálně navržený pro hráče, významně vylepšuje herní zážitek poskytnutím pohlcujícího 3D zvuku. Nyní můžete snadno komunikovat se svými spoluhráči, což vám umožňuje kombinovat a sdílet cesty streamování zvuku jako profesionální streamer. S Nahimic své hry nehrajete, ale prožíváte.</p>
+        </div>
+        <img src="sound.webp" style="opacity: 0;" data-inviewport="fade-in" alt="">
+      </div>
+      <div id="connectivity" class="box imp column">
+        <p>Porty/sloty</p>
+        <img src="ports.webp" alt="">
+        <div class="row">
+          <div id="left">
+            <ol>
+              <li>Ethernet (RJ45)</li>
+              <li>USB-C 3.2 Gen 2 (DisplayPort™ 1.4, napájení 140 W)</li>
+              <li>HDMI 2.1</li>
+              <li>USB-A 3.2 Gen 1 (1 trvale napájený s 5V2A)</li>
+              <li>Napájení</li>
+            </ol>
+          </div>
+          <div id="line"></div>
+          <div id="right">
+            <ol start="6">
+              <li>Kombinovaný port pro sluchátka a mikrofon</li>
+              <li>Kryt kamery e-shutter</li>
+              <li>USB-A 3.2 Gen 1</li>
+              <li>USB-A 3.2 Gen 1</li>
+              <li>USB-C 3.2 Gen 2 (DisplayPort™ 1.4)</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="centerfull">
+        <div id="buy-section" class="box column imp">
+          <div class="row">
+            <div id="product-text" class="column">
+              <h2>Legion Pro 7 Gen 8 (16, AMD)</h2>
+              <ul>
+                <li>Výkonný herní notebook s umělou inteligencí a procesorem AMD Ryzen™</li>
+                <li>Ohromující 16" herní displej Lenovo PureSight s rozlišením WQXGA</li>
+                <li>Nejlepší chladící technologie ve své třídě a optimalizace systému v reálném čase</li>
+                <li>Obrovská 99,99 Wh baterie se super rychlým nabíjením</li>
+                <li>Přizpůsobitelná klávesnice s RGB podsvícením pro jednotlivé klávesy s vyměnitelnými krytkami</li>
+                <li>Recyklovaný hliník a organické polymery přispívají k udržitelnějšímu hraní</li>
+                <li>Zahrajte si více než 100 vysoce kvalitních počítačových her se svým novým počítačem Legion a užijte
+                  si 3 měsíce Xbox Game Pass zdarma</li>
+              </ul>
+              <a class="buy-button" href="jednickuprosimfaktmocprosimprosimuwu.html">Koupit</a>
+            </div>
+            <div class="slider-wrapper column">
+              <div class="slider">
+                <img id="slide-1" src="product1.webp" alt="">
+                <img id="slide-2" src="product2.webp" alt="">
+                <img id="slide-3" src="product3.webp" alt="">
+                <img id="slide-4" src="product4.webp" alt="">
+                <img id="slide-5" src="product5.webp" alt="">
+                <img id="slide-6" src="product6.webp" alt="">
+              </div>
+              <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+                <a href="#slide-6"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>Všechna práva vyhrazena. © 2023 Štefáček Jan</p>
+  </footer>
+</body>
+
+</html>

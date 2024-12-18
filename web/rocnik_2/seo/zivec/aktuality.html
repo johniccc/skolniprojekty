@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+:root {
+	 --text: #2b3044;
+	 --line: #275efe;
+	 --font-size: 17px;
+	 --duration: 0.44s;
+	 --duration-line: 1.8s;
+}
+ .aktuality-articles-btn {
+	 display: inline-block;
+	 position: relative;
+	 text-decoration: none;
+	 color: inherit;
+}
+ .aktuality-articles-btn div {
+	 overflow: hidden;
+}
+ .aktuality-articles-btn div:first-child {
+	 display: flex;
+	 overflow: hidden;
+	 text-shadow: 0 var(--font-size) 0 var(--text);
+}
+ .aktuality-articles-btn div:last-child {
+	 position: absolute;
+	 pointer-events: none;
+	 right: 0;
+	 left: 0;
+	 bottom: -4px;
+	 height: 5px;
+}
+ .aktuality-articles-btn div:last-child svg {
+	 display: block;
+	 position: absolute;
+	 right: 0;
+	 top: 0;
+	 width: 300%;
+	 height: 4px;
+	 fill: none;
+	 stroke: var(--line);
+	 stroke-width: 1.5px;
+	 stroke-linecap: round;
+	 stroke-dasharray: 63.5px 128px;
+	 stroke-dashoffset: var(--line-offset, 190.25px);
+	 transform: translateX(var(--line-x)) translateZ(0);
+	 transition: transform var(--line-d, 0s), stroke-dashoffset var(--line-d, 0s);
+}
+ .aktuality-articles-btn div span {
+	 display: block;
+	 backface-visibility: hidden;
+	 font-style: normal;
+	 transition: transform var(--duration) ease;
+	 transform: translateY(var(--m, 0));
+}
+ .aktuality-articles-btn div span:nth-child(1) {
+	 transition-delay: 0.05s;
+}
+ .aktuality-articles-btn div span:nth-child(2) {
+	 transition-delay: 0.1s;
+}
+ .aktuality-articles-btn div span:nth-child(3) {
+	 transition-delay: 0.15s;
+}
+ .aktuality-articles-btn div span:nth-child(4) {
+	 transition-delay: 0.2s;
+}
+ .aktuality-articles-btn div span:nth-child(5) {
+	 transition-delay: 0.25s;
+}
+ .aktuality-articles-btn div span:nth-child(6) {
+	 transition-delay: 0.3s;
+}
+ .aktuality-articles-btn div span:nth-child(7) {
+	 transition-delay: 0.35s;
+}
+ .aktuality-articles-btn div span:nth-child(8) {
+	 transition-delay: 0.4s;
+}
+ .aktuality-articles-btn div span:nth-child(9) {
+	 transition-delay: 0.45s;
+}
+ .aktuality-articles-btn div span:nth-child(10) {
+	 transition-delay: 0.5s;
+}
+ .aktuality-articles-btn div span:nth-child(11) {
+	 transition-delay: 0.55s;
+}
+.aktuality-articles-btn div span:nth-child(12) {
+	 transition-delay: 0.6s;
+}
+.aktuality-articles-btn div span:nth-child(13) {
+	 transition-delay: 0.65s;
+}
+.aktuality-articles-btn div span:nth-child(14) {
+	 transition-delay: 0.7s;
+}
+.aktuality-articles-btn div span:nth-child(15) {
+	 transition-delay: 0.75s;
+}
+.aktuality-articles-btn div span:nth-child(16) {
+	 transition-delay: 0.8s;
+}
+.aktuality-articles-btn div span:nth-child(17) {
+	 transition-delay: 0.85s;
+}
+.aktuality-articles-btn div span:nth-child(18) {
+	 transition-delay: 0.9s;
+}
+.aktuality-articles-btn div span:nth-child(19) {
+	 transition-delay: 0.95s;
+}
+.aktuality-articles-btn div span:nth-child(20) {
+	 transition-delay: 1s;
+}
+.aktuality-articles-btn div span:nth-child(21) {
+	 transition-delay: 1.05s;
+}
+.aktuality-articles-btn div span:nth-child(22) {
+	 transition-delay: 1.10s;
+}
+.aktuality-articles-btn div span:nth-child(23) {
+	 transition-delay: 1.15s;
+}
+
+ .aktuality-articles-btn:hover {
+	 --m: calc(var(--font-size) * -1);
+	 --line-d: var(--duration-line);
+	 --line-x: 65.66%;
+	 --line-offset: 63.5px;
+}
+  </style>
+</head>
+<body>
+  <a class="aktuality-articles-btn" href="">Zobrazit všechny články</a>
+  <script>
+		const ref = document.getElementsByClassName("circle")[0]; 
+document.addEventListener('mousemove', (event) => {
+  	if (e.target.classList.contains("aktuality-articles-btn") == true) {
+        circle.classList.add('big');
+    } else {
+        circle.classList.remove('big');
+    }
+    const y = event.pageY;
+    const x = event.pageX;
+    const scrollLeft = (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
+    const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    setTimeout(() => { 
+        ref.style.left =  x - scrollLeft + 'px';
+    		ref.style.top = y - scrollTop + 'px';
+    }, 20); 
+});
+
+  </script>
+</body>
+</html>

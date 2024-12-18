@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+    /* Table grid spacing*/
+    --row-spacing: 30px;
+    --column-spacing: 30px;
+    --lessons-gap: 10px;
+
+    /* Font-size */
+    --global-font-size: 1rem;
+
+    /* Paddings */
+    --timetable-padding: 32px;
+    --lesson-table-padding: 50px;
+
+    /* Other */
+    --columns-count: 13;
+    --global-border-radius: 5px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.table {
+    width: 100%;
+    padding: 2rem;
+    font-size: var(--global-font-size);
+}
+
+.cell {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--lessons-gap);
+    background-color: hsla(0, 0%, 95%, 0.45);
+    border-radius: var(--global-border-radius);
+}
+
+.cell.corner,
+.cell.lesson-day {
+    background-color: transparent;
+}
+
+.lesson {
+    background-color: hsl(0, 0, 100%);
+    color: hsl(0, 0%, 0%);
+    box-shadow: hsla(206, 6%, 25%, 0.4) 0px 1px 2px 0px,
+        hsla(206, 6%, 25%, 0.2) 0px 2px 6px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+}
+
+.lesson,
+.cell.empty {
+    padding: 8px 8px;
+    min-width: 90px;
+    border-radius: 5px;
+}
+
+/* ! Boxy dnů v týdnu */
+
+.cell.lesson-day .lesson,
+.header .lesson {
+    background-color: hsl(199, 90%, 35%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+}
+
+.cell.lesson-day .lesson,
+.cell.corner {
+    height: 100%;
+    min-width: 0;
+    width: 3em;
+}
+
+.cell.lesson-day p {
+    font-size: 1.1em;
+    font-weight: 600;
+    transform: rotate(-90deg);
+}
+
+/* ! Boxy předmětů*/
+
+.cell.lesson-box .top,
+.cell.lesson-box .center,
+.cell.lesson-box .bottom {
+    display: flex;
+    width: 100%;
+}
+
+.cell.lesson-box .top {
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+}
+
+.cell.lesson-box .center {
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+.cell.lesson-box .bottom {
+    justify-content: center;
+}
+
+.cell.lesson-box .lesson-topic {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.cell.lesson-box .teacher {
+    font-size: 0.9em;
+    color: hsl(0, 0%, 40%);
+}
+
+/* ! Header pořadí hodin */
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(var(--columns-count), auto);
+    width: 100%;
+    gap: var(--column-spacing);
+    margin-bottom: var(--lesson-table-padding);
+}
+
+.header .lesson-order {
+    margin-bottom: 5px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.header .lesson-time {
+    font-size: 0.75em;
+    color: hsl(0, 0%, 90%);
+}
+
+/* ! Kontejner na předměty */
+
+.lessons-table {
+    display: flex;
+    flex-direction: column;
+    gap: var(--row-spacing);
+}
+
+.lessons-table .row {
+    display: grid;
+    grid-template-columns: repeat(var(--columns-count), auto);
+    column-gap: var(--column-spacing);
+    align-items: center;
+}

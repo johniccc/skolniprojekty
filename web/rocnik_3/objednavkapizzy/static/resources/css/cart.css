@@ -1,0 +1,160 @@
+main#cart {
+	height: 100lvh;
+	display: grid;
+	grid-template-columns: 6fr 5fr;
+}
+
+main#cart #details {
+	padding: var(--padding-x-large);
+	overflow-y: scroll;
+}
+
+main#cart #details form {
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-large);
+}
+
+main#cart #details .top {
+	display: flex;
+	align-items: center;
+	gap: var(--padding-medium);
+	font-size: 2.25rem;
+}
+
+main#cart #details .top .backBtn {
+	display: flex;
+	align-items: center;
+}
+
+main#cart #details .top .backBtn svg {
+	height: 1.2em;
+	width: auto;
+}
+
+main#cart #details .category {
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-medium);
+}
+
+main#cart #details .category .inputs {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--padding-large);
+}
+
+main#cart #details .category .inputs .input-field {
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-small);
+}
+
+main#cart #details .category .inputs .input-field .card-expiry {
+	display: flex;
+	flex-direction: row;
+	gap: var(--padding-medium);
+}
+
+main#cart #details .category .inputs .input-field .feedback {
+	position: relative;
+}
+
+main#cart #details .category .inputs .input-field .feedback .input {
+	width: 100%;
+}
+
+main#cart #details .category .inputs .input-field .feedback .error {
+	color: var(--red);
+	position: absolute;
+	left: var(--padding-small);
+	font-size: 0.8em;
+	bottom: -1.65em;
+	z-index: -1;
+}
+
+main#cart #details .category .inputs .input-field.full-width {
+	grid-column: 1/3;
+}
+
+main#cart #details .category .inputs .input-field.checkbox {
+	flex-direction: row;
+	align-items: center;
+}
+
+main#cart #summary {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main#cart #summary .box {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-large);
+	padding: var(--padding-large);
+}
+
+main#cart #summary .box .items {
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-medium);
+}
+
+main#cart #summary .box .items .item {
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-small);
+	padding: var(--padding-medium);
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: var(--radius);
+}
+
+main#cart #summary .box .items .item .top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--padding-small);
+}
+
+main#cart #summary .box .items .item .top .closeBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	cursor: pointer;
+	color: var(--red);
+}
+
+main#cart #summary .box .items .item .top .closeBtn svg {
+	width: 1.4em;
+	height: auto;
+}
+
+main#cart #summary .box .items .item .ingredients {
+	display: flex;
+	gap: var(--padding-small);
+}
+
+main#cart #summary .box .bottom {
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-medium);
+	align-items: flex-end;
+	text-align: right;
+}
+
+main#cart #summary .box .bottom .price {
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-small);
+	align-items: flex-end;
+}
+
+main#cart #summary .box .bottom .buttons {
+	display: flex;
+	gap: var(--padding-small);
+	align-items: flex-end;
+	text-align: center;
+}

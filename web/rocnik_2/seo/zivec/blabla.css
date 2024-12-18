@@ -1,0 +1,84 @@
+:root {
+  --offset: 400px;
+  --offset2: -400px;
+  --degrees1: -30deg;
+  --degrees2: -10deg;
+  --degrees3: 10deg;
+  --degrees4: 30deg;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+}
+
+.line-container {
+  border: 2px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  width: 70px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+}
+
+.line:nth-of-type(1) {
+  transform: translate(calc(cos(var(--degrees1))*var(--offset)), calc(sin(var(--degrees1))*var(--offset))) rotate(var(--degrees1))
+}
+
+.line:nth-of-type(2) {
+  transform: translate(calc(cos(var(--degrees2))*var(--offset)), calc(sin(var(--degrees2))*var(--offset))) rotate(var(--degrees2));;
+}
+
+.line:nth-of-type(3) {
+  transform: translate(calc(cos(var(--degrees3))*var(--offset)), calc(sin(var(--degrees3))*var(--offset))) rotate(var(--degrees3));
+}
+
+.line:nth-of-type(4) {
+  transform: translate(calc(cos(var(--degrees4))*var(--offset)), calc(sin(var(--degrees4))*var(--offset))) rotate(var(--degrees4));
+}
+
+.line:nth-of-type(5) {
+  transform: translate(calc(cos(var(--degrees1))*var(--offset2)), calc(sin(var(--degrees1))*var(--offset2))) rotate(var(--degrees1));
+}
+
+.line:nth-of-type(6) {
+  transform: translate(calc(cos(var(--degrees2))*var(--offset2)), calc(sin(var(--degrees2))*var(--offset2))) rotate(var(--degrees2));
+}
+
+.line:nth-of-type(7) {
+  transform: translate(calc(cos(var(--degrees3))*var(--offset2)), calc(sin(var(--degrees3))*var(--offset2))) rotate(var(--degrees3));
+}
+
+.line:nth-of-type(8) {
+  transform: translate(calc(cos(var(--degrees4))*var(--offset2)), calc(sin(var(--degrees4))*var(--offset2))) rotate(var(--degrees4));
+}
+
+.line:nth-of-type(1) .circle-text, .line:nth-of-type(8) .circle-text {
+  transform: rotate(var(--degrees4));
+}
+
+.line:nth-of-type(2) .circle-text, .line:nth-of-type(6) .circle-text {
+  transform: rotate(var(--degrees3));
+}
+
+.line:nth-of-type(3) .circle-text, .line:nth-of-type(7) .circle-text {
+  transform: rotate(var(--degrees2));
+}
+
+.line:nth-of-type(4) .circle-text, .line:nth-of-type(5) .circle-text {
+  transform: rotate(var(--degrees1));
+}

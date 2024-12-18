@@ -1,0 +1,2 @@
+<link rel="icon" type="image/x-icon" href="src/img/logo-small.svg">
+<meta name="keywords" content="útulek pro psy, útulek pro kočky, adopce zvířat, dobrovolník pro zvířata, bezdomovci tlapky, charitativní organizace pro zvířata, adoptujte lásku, adoptujte radost, péče o domácí zvířata, nový čtyřnohý přítel, podpora bezdomovců, bezdomovci, dobrovolnictví pro zvířata, dobrovolník pro útulek, péče o opuštěné zvíře, zvířecí adopce, Lucky Paws, štěstí tlapky, láska a radost pro zvířata.">

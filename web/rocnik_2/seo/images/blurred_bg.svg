@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="515.14038"
+   height="515.14038"
+   viewBox="0 0 515.14039 515.14038"
+   fill="none"
+   version="1.1"
+   id="svg15"
+   sodipodi:docname="blurred_bg.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview17"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.4212444"
+     inkscape:cx="303.86161"
+     inkscape:cy="113.9481"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg15" />
+  <defs
+     id="defs13">
+    <filter
+       id="filter0_f_16_41"
+       x="-394"
+       y="-363"
+       width="2747"
+       height="1768"
+       filterUnits="userSpaceOnUse"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         flood-opacity="0"
+         result="BackgroundImageFix"
+         id="feFlood6" />
+      <feBlend
+         mode="normal"
+         in="SourceGraphic"
+         in2="BackgroundImageFix"
+         result="shape"
+         id="feBlend8" />
+      <feGaussianBlur
+         stdDeviation="300"
+         result="effect1_foregroundBlur_16_41"
+         id="feGaussianBlur10" />
+    </filter>
+  </defs>
+  <circle
+     style="fill:#74a9ce;fill-opacity:0.490196;stroke-width:1.50931"
+     id="path1035"
+     cx="257.57019"
+     cy="257.57019"
+     r="257.57019" />
+</svg>

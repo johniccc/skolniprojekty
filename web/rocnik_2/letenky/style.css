@@ -1,0 +1,527 @@
+@import url("https://use.typekit.net/ukr4fmm.css");
+
+@font-face {
+    font-family: RedHatDisplay;
+    src: url(src/fonts/RedHatDisplay-Variable.ttf);
+}
+
+@font-face {
+    font-family: Switzer;
+    src: url(src/fonts/Switzer-Variable.ttf);
+}
+
+:root {
+    /* Fonts */
+    --heading-font: "RedHatDisplay", sans-serif;
+    --paragraph-font: "Switzer", sans-serif;
+
+    /* Colors */
+    --confirm: #004346;
+    --primary: #314cb6;
+    --border: #b8b8b8;
+
+    /* Paddings */
+    --input-side-padding: 10px;
+    --input-top-padding: 10px;
+}
+
+@media print {
+    .noPrint {
+        display: none;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: var(--paragraph-font);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+section .container {
+    width: 100%;
+    max-width: 1500px;
+    padding: 0 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text);
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2rem;
+}
+h4 {
+    font-size: 1.5rem;
+}
+h5 {
+    font-size: 1.25rem;
+}
+h6 {
+    font-size: 1rem;
+}
+
+.error-msg {
+    position: absolute;
+    width: 100%;
+    font-size: 0.75em;
+    color: red;
+    bottom: -20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.anim-scroll {
+    transform: translateY(100%);
+    animation: text-scroll-in 2s cubic-bezier(0.88, 0.01, 0.125, 0.995);
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* Header */
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+    z-index: 99999;
+}
+
+header .socials {
+    display: flex;
+    gap: 25px;
+}
+
+header .socials a {
+    --dimensions: 30px;
+
+    width: var(--dimensions);
+    height: var(--dimensions);
+    color: white;
+    transition: filter 300ms;
+}
+
+header .socials a:hover {
+    filter: brightness(0.75);
+}
+
+/* Footer */
+
+/* Body */
+
+@keyframes fly-in-bg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#hero {
+    margin-top: 0;
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 4fr 3fr;
+    height: 100vh;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, 0.2) 100%
+        ),
+        url(src/img/airplane-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: fly-in-bg 2s cubic-bezier(0.88, 0.01, 0.125, 0.995);
+}
+
+@keyframes fly-in {
+    0% {
+        transform: translateX(-10%) scale(1.2);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%) scale(1);
+        opacity: 1;
+    }
+}
+
+#hero #airplane-cutout {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    animation: fly-in 2s cubic-bezier(0.88, 0.01, 0.125, 0.995);
+}
+
+@keyframes text-scroll-in {
+    0% {
+        transform: translateY(110%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#hero .text {
+    position: relative;
+    width: fit-content;
+    z-index: 2;
+    grid-area: 1/2/2/3;
+    text-transform: uppercase;
+    padding-right: 5rem;
+    color: white;
+}
+
+#hero .blur-bg {
+    position: absolute;
+    width: 110%;
+    height: 150%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 200px;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    filter: blur(80px);
+    opacity: 0;
+    animation: fade-in 2s cubic-bezier(0.88, 0.01, 0.125, 0.995);
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#hero .text .text-row:first-of-type h1 {
+    font-size: 9rem;
+}
+
+#hero .text .text-row:nth-of-type(2) h1 {
+    font-size: 2.2rem;
+}
+
+#hero .text .text-row {
+    overflow: hidden;
+    position: relative;
+    z-index: 4;
+}
+
+#hero .scrollIcon {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+}
+
+#hero .scrollIcon svg {
+    --dimensions: 40px;
+
+    color: white;
+    width: var(--dimensions);
+    height: var(--dimensions);
+}
+
+/* Default form styling */
+
+::placeholder {
+    color: #aaa;
+}
+
+input,
+select {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    border-radius: 200px;
+    border: 2px solid var(--border);
+    padding: var(--input-top-padding) var(--input-side-padding);
+}
+
+.select-wrap,
+.date-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.select-wrap select,
+.date-wrap input {
+    width: 100%;
+}
+
+.select-wrap svg,
+.date-wrap svg {
+    position: absolute;
+    height: calc(100% - (var(--input-top-padding) * 2));
+    width: auto;
+    right: calc(var(--input-side-padding) + 5px);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: "";
+    position: relative;
+    padding-right: calc(var(--input-side-padding) + 20px);
+}
+
+.selectize-input.dropdown-active::before {
+    display: none !important;
+}
+
+.selectize-input {
+    border-radius: 200px !important;
+    padding: var(--input-top-padding) var(--input-side-padding) !important;
+}
+
+.selectize-dropdown {
+    margin-top: 10px !important;
+    border-top: 1px solid #d0d0d0 !important;
+}
+
+.selectize-input > input {
+    border-radius: 0 !important;
+}
+
+input[type="date"] {
+    position: relative;
+}
+
+input[type="date"].empty:before {
+    content: attr(placeholder) !important;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: white;
+    color: #aaa;
+    opacity: 1 !important;
+    visibility: visible !important;
+    white-space: nowrap;
+    padding: var(--input-top-padding) var(--input-side-padding);
+    border-radius: 200px;
+    box-sizing: border-box;
+}
+input[type="date"]:before,
+input[type="date"]:invalid:before {
+    opacity: 0;
+    visibility: hidden;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+.gender option[disabled][hidden] {
+    color: #757575;
+}
+
+/* Form specfic styling */
+
+.form-el {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-el.passenger {
+    margin-bottom: 1rem;
+}
+
+.form-el label {
+    margin-bottom: 0.3rem;
+}
+
+#flight-form .submitBtn {
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--confirm);
+}
+
+#orderForm h2 {
+    margin-bottom: 1.25rem;
+}
+
+#airports {
+    border-radius: 20px;
+    border: 2px solid var(--border);
+    padding: 2rem 2.5rem;
+    margin-bottom: 50px;
+}
+
+#airports label {
+    font-size: 1.2rem;
+}
+
+#airports .top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+}
+
+#airports .bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+#airports .checkBtn {
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 1.25rem;
+}
+
+#airports .form-el:has(.checkBtn) {
+    align-self: flex-end;
+}
+
+#passengers {
+    opacity: 0;
+    visibility: hidden;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    border: 2px solid var(--border);
+    padding: 2rem 2.5rem;
+    padding-bottom: calc(2.5rem + 8px);
+    transition: opacity 300ms, visibility 300ms;
+}
+
+#passengers h3 {
+    margin-bottom: 1.25rem;
+}
+
+#passengers .closeBtn,
+#passengers #addBtn,
+.submitBtn,
+.printBtn,
+.checkBtn {
+    padding: 8px 16px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    width: fit-content;
+}
+
+#passengers .closeBtn {
+    padding-left: calc(var(--input-side-padding) + 25px);
+}
+
+#passengers .closeBtn::after {
+    content: url(src/img/close.svg);
+    width: 20px;
+    height: 20px;
+    left: var(--input-side-padding);
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    fill: white;
+}
+
+#passenger-clone {
+    display: none;
+}
+
+#passengers .passenger .title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 0.5rem;
+}
+
+#passengers .passenger .details .row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#summary {
+    margin-bottom: 80px;
+}
+
+#summary h2 {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms;
+}
+
+#summary .information-summary,
+#summary .flight-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

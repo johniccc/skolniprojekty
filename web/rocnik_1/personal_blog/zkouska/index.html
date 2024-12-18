@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kill Film - hodnocení filmů a seriálů</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo-box">
+        <a href="index.html"><img class="logo" src="logo.svg" alt="logo"></a>
+      </div>
+      <nav id="nav">
+        <div class="dropdown">
+          <a href="javascript:void(0);" onclick="dropdown1()" class="dropdown-trigger">
+            <p>Filmy</p>
+          </a>
+          <div class="dropdown-content" id="dropdown-content1">
+            <a href="recenze-filmy.html#page-name">
+              <li class="dropdown-item">Recenze</li>
+            </a>
+            <a href="seznam-filmy.html#nav">
+              <li class="dropdown-item">Seznam zhlédnutých</li>
+            </a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="javascript:void(0);" onclick="dropdown2()" class="dropdown-trigger">
+            <p>Seriály</p>
+          </a>
+          <div class="dropdown-content" id="dropdown-content2">
+            <a href="recenze-serialy.html#page-name">
+              <li class="dropdown-item">Recenze</li>
+            </a>
+            <a href="seznam-serialy.html#nav">
+              <li class="dropdown-item">Seznam zhlédnutých</li>
+            </a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="javascript:void(0);" onclick="dropdown3()" class="dropdown-trigger">
+            <p>Top 10</p>
+          </a>
+          <div class="dropdown-content" id="dropdown-content3">
+            <a href="zebricek-filmy.html#nav">
+              <li class="dropdown-item">Filmy</li>
+            </a>
+            <a href="zebricek-serialy.html#nav">
+              <li class="dropdown-item">Seriály</li>
+            </a>
+          </div>
+        </div>
+          <a href="navrhy.html#suggestion-form" class="other-nav">Návrhy</a>
+          <a href="o-mne.html#ranking" class="other-nav">O mně</a>
+      </nav>
+    </header>
+    <div class="articles-div">
+      <h1 class="featured">Nedávné:</h1>
+      <section class="articles">
+        <div class="article-box">
+          <h2 class="article-name">Prci, prci, prcičky: Spolek Beta</h2>
+          <p class="rating-main">&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+          <img class="article-img-preview" src="fotky/spolekbeta.webp" alt="Spolek Beta">
+          <a class="review-link-main" href="Filmy/spolekbeta.html#full-width-section">Celá recenze zde.</a>
+        </div>
+        <div class="article-box">
+          <h2 class="article-name">Zámek v oblacích</h2>
+          <p class="rating-main">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+          <img class="article-img-preview" src="fotky/howls-moving-castle.webp" alt="Howl's Moving Castle">
+          <a class="review-link-main" href="Filmy/howlsmovingcastle.html">Celá recenze zde.</a>
+        </div>
+        <div class="article-box">
+          <h2 class="article-name">Prci, prci, prcičky: Nahá Míle</h2>
+          <p class="rating-main">&#9733;&#9734;&#9734;&#9734;&#9734;</p>
+          <img class="article-img-preview" src="fotky/nahamile.webp" alt="Nahá Míle">
+          <a class="review-link-main" href="Filmy/nahamile.html">Celá recenze zde.</a>
+        </div>
+        <div class="article-box">
+          <h2 class="article-name">Dobrý Will Hunting</h2>
+          <p class="rating-main">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+          <img class="article-img-preview" src="fotky/goodwillhunting.webp" alt="Good Will Hunting">
+          <a class="review-link-main" href="Filmy/goodwillhunting.html">Celá recenze zde.</a>
+        </div>
+      </section>
+    </div>
+    <div class="articles-div">
+      <h1 class="featured">Rozkoukáno:</h1>
+      <section class="articles">
+        <div class="article-box">
+          <h2 class="article-name">Poslední z nás</h2>
+          <img class="article-img-preview" style="margin-top: 1rem;" src="fotky/thelastofus.webp" alt="The Last Of Us">
+        </div>
+      </section>
+    </div>
+  </div>
+  <footer>
+    <p>&#169; Jan Štefáček 2023</p>
+  </footer>
+</body>
+</html>

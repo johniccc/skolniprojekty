@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/icon.svg">
+  <title>Metody | SEO - optimalizace pro vyhledávače</title>
+</head>
+
+<body>
+  <header class="method-header">
+    <img class="bg-img method-header-bg" src="images/blobs_bg.svg" alt="">
+    <a class="redirect-btn" href="index.html">« Zpět</a>
+    <h1>Posuňte své stránky<br><span class="color-text">na novou úroveň</span></h1>
+    <p>Zvyšujte viditelnost a získávejte více návštěvníků díky našim jednoduchým, efektivním tipům. Naše stránka vám
+      nabízí rychlý a snadný přehled osvědčených metod pro zlepšení SEO na vašem webu.</p>
+  </header>
+  <main class="method-main">
+
+    <section class="ethical">
+      <div class="method-box">
+        <div class="method-text-container">
+          <h3>&lt;title&gt;</h3>
+          <p>jednoduchý a výstižný název stránky (může obsahovat zaměření stránky), pro každou stránku jiný</p>
+        </div>
+        <div class="code-block">
+          <p>&lt;<span class="pink-code">title</span>&gt;Toto je název mé stránky&lt;<span
+              class="pink-code">title</span>&gt;</p>
+          <img class="copy-btn" onclick="copyTxt()" src="images/copy.svg" alt="">
+        </div>
+      </div>
+      <div class="method-box">
+        <div class="method-text-container">
+          <h3>&lt;meta&gt;</h3>
+          <p>krátký popis stránky, který se následovně zobrazí v search enginech, pro každou stránku jiný</p>
+        </div>
+        <div class="code-block">
+          <p>&lt;<span class="pink-code">meta</span> <span class="green-code">name</span><span
+              class="pink-code">=</span><span class="yellow-code">"description"</span> <span
+              class="green-code">content</span><span class="pink-code">=</span><span class="yellow-code">"Moje krásná
+              stránka s nějakým tématem"</span>&gt;<br>
+            &lt;<span class="pink-code">meta</span> <span class="green-code">name</span><span
+              class="pink-code">=</span><span class="yellow-code">"page"</span> <span
+              class="green-code">content</span><span class="pink-code">=</span><span
+              class="yellow-code">"noindex"</span>&gt;<span class="comment-code">&lt;!-- Stránka se nebude v search
+              enginu indexovat -- &gt;</span></p>
+          <img class="copy-btn" onclick="copyTxt()" src="images/copy.svg" alt="">
+        </div>
+      </div>
+      <div class="method-box">
+        <div class="method-text-container">
+          <h3>&lt;h1-h6&gt;</h3>
+          <p>používat pro vyjádření struktury obsahu (hlavní body) a pouze mimořádně (hlavně ne využívat jen pro
+            velikosti)</p>
+        </div>
+        <div class="code-block">
+          <p>&lt;<span class="pink-code">h1</span>&gt;Toto je nadpis úrovně 1 (nejvyšší úroveň)&lt;/<span
+              class="pink-code">h1</span>&gt;<br>
+            &lt;<span class="pink-code">h2</span>&gt;Toto je nadpis úrovně 2&lt;/<span
+              class="pink-code">h2</span>&gt;<br>
+            &lt;<span class="pink-code">h3</span>&gt;Toto je nadpis úrovně 3&lt;/<span
+              class="pink-code">h3</span>&gt;<br>
+            &lt;<span class="pink-code">h4</span>&gt;Toto je nadpis úrovně 4&lt;/<span
+              class="pink-code">h4</span>&gt;<br>
+            &lt;<span class="pink-code">h5</span>&gt;Toto je nadpis úrovně 5&lt;/<span
+              class="pink-code">h5</span>&gt;<br>
+            &lt;<span class="pink-code">h6</span>&gt;Toto je nadpis úrovně 6 (nejnižší úroveň)&lt;/<span
+              class="pink-code">h6</span>&gt;</p>
+          <img class="copy-btn" onclick="copyTxt()" src="images/copy.svg" alt="">
+        </div>
+      </div>
+      <div class="method-box">
+        <div class="method-text-container">
+          <h3>Struktura URL</h3>
+          <p>pochopitelné a jednoduché uspořádání, vytvoření hierarchie od obecného k specifickému contentu</p>
+        </div>
+        <div class="code-block">
+          <p>protocol://hostname/path/filename?querystring#fragment</p>
+          <img class="copy-btn" onclick="copyTxt()" src="images/copy.svg" alt="">
+        </div>
+      </div>
+      <div class="method-box">
+        <div class="method-text-container">
+          <h3>Robots.txt</h3>
+          <p>nástroj, který umožňuje webovým vyhledávačům řídit, které části vašich webových stránek mají být indexovány
+            (vyhledávány) a které by měly zůstat skryty před vyhledávači</p>
+        </div>
+        <div class="code-block">
+          <p>User-agent: <span class="pink-code">Googlebot</span><br>
+            Disallow: <span class="green-code">/image/</span></p>
+          <img class="copy-btn" onclick="copyTxt()" src="images/copy.svg" alt="">
+        </div>
+      </div>
+      <div class="method-box">
+        <div class="method-text-container">
+          <h3>Odkazy &lt;a&gt;</h3>
+          <p>specifický styl, krátké výstižné popisy</p>
+        </div>
+        <div class="code-block">
+          <p>&lt;<span class="pink-code">a</span> <span class="green-code">href</span><span
+              class="pink-code">=</span><span class="yellow-code">"https://www.example.com"</span> <span
+              class="green-code">rel</span><span class="pink-code">=</span><span
+              class="yellow-code">"nofollow"</span>&gt;Toto je odkaz na Example.com&lt;<span
+              class="pink-code">a</span>&gt;<span class="comment-code">&lt;!- rel=“nofollow“ dá crawlerovi vědět, aby
+              určitý odkaz nespojoval s původní stránkou (komentáře s linky) -- &gt;</span></p>
+          <img class="copy-btn" onclick="copyTxt()" src="images/copy.svg" alt="">
+        </div>
+      </div>
+      <div class="method-box">
+        <div class="method-text-container">
+          <h3>Obrázky &lt;img&gt;</h3>
+          <p>&lt;img&gt; nebo &lt;picture&gt;, nevyužíváme obrázku v CSS, využití alt, využití základních formátů (PNG,
+            SVG, WebP, …)</p>
+        </div>
+        <div class="code-block">
+          <p>&lt;<span class="pink-code">img</span> <span class="green-code">src</span><span
+              class="pink-code">=</span><span class="yellow-code">"obrazek.webp"</span> <span
+              class="green-code">alt</span><span class="pink-code">=</span><span class="yellow-code">"Toto je
+              alternativní text pro obrázek"</span>&gt;</p>
+          <img class="copy-btn" onclick="copyTxt()" src="images/copy.svg" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="top-footer">
+        <div class="logo">
+          <img src="images/footer/milk.svg" alt="Ikona mléka">
+          <p>Mliko</p>
+        </div>
+        <div class="links">
+          <div class="websites">
+            <a href="https://stefacja22.llmp.spse-net.cz">Rozcestník</a>
+            <div class="split-line"></div>
+            <a href="https://stefacja22.llmp.spse-net.cz/Lenovo%20-%20onepage/">Lenovo</a>
+            <div class="split-line"></div>
+            <a href="https://stefacja22.llmp.spse-net.cz/Blog/">Kill Film</a>
+          </div>
+          <div class="social-media">
+            <a href="https://discord.gg/HX4X3QAJ"><img src="images/footer/discord.svg" alt="Discord"></a>
+            <a href="https://github.com/johniccc"><img src="images/footer/github.svg" alt="Github"></a>
+            <a href="https://www.instagram.com/stefacek_honza/"><img src="images/footer/instagram.svg"
+                alt="Instagram"></a>
+          </div>
+        </div>
+      </div>
+      <div class="break-line"></div>
+      <p class="copyright">&#169;Štefáček Jan 2023</p>
+    </div>
+  </footer>
+  <script src="app2.js"></script>
+</body>
+
+</html>

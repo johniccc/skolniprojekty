@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kill Film - hodnocení filmů a seriálů</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo-box">
+        <a href="index.html"><img class="logo" src="logo.svg" alt="logo"></a>
+      </div>
+      <nav id="nav">
+        <div class="dropdown">
+          <a href="javascript:void(0);" onclick="dropdown1()" class="dropdown-trigger">
+            <p>Filmy</p>
+          </a>
+          <div class="dropdown-content" id="dropdown-content1">
+            <a href="recenze-filmy.html#page-name">
+              <p class="dropdown-item">Recenze</p>
+            </a>
+            <a href="seznam-filmy.html#movie-list">
+              <p class="dropdown-item">Seznam zhlédnutých</p>
+            </a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="javascript:void(0);" onclick="dropdown2()" class="dropdown-trigger">
+            <p>Seriály</p>
+          </a>
+          <div class="dropdown-content" id="dropdown-content2">
+            <a href="recenze-serialy.html#page-name">
+              <p class="dropdown-item">Recenze</p>
+            </a>
+            <a href="seznam-serialy.html#movie-list">
+              <p class="dropdown-item">Seznam zhlédnutých</p>
+            </a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="javascript:void(0);" onclick="dropdown3()" class="dropdown-trigger">
+            <p>Top 10</p>
+          </a>
+          <div class="dropdown-content" id="dropdown-content3">
+            <a href="zebricek-filmy.html#ranking">
+              <p class="dropdown-item">Filmy</p>
+            </a>
+            <a href="zebricek-serialy.html#ranking">
+              <p class="dropdown-item">Seriály</p>
+            </a>
+          </div>
+        </div>
+          <a href="navrhy.html#suggestion-form" class="other-nav">Návrhy</a>
+          <a href="o-mne.html#about-me" class="other-nav">O mně</a>
+      </nav>
+    </header>
+    <div class="page-name-div" id="page-name">
+      <h1 class="page-name">Recenze filmů:</h1>
+    </div>
+    <div class="main-section">
+      <section class="reviews">
+        <article class="preview-review-box">
+          <h2>Prci, prci, prcičky: Spolek Beta</h2>
+          <p class="date">5. 2. 2023</p>
+          <img style="object-position: 50% 20%" class="preview-review-image" src="fotky/spolekbeta.webp" alt="">
+          <p class="rating">&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+          <p class="review-preview">Série "Prci, prci, prcičky" je mou osobně oblíbenou sérií, ale to platí pouze v případě té základní série, která pro mě vyvrcholila filmem "Prci, prci, prcičky: Školní sraz". Druhá série, která běžela...</p>
+          <a class="review-link" href="Filmy/spolekbeta.html#full-width-section">Celá recenze zde.</a>
+        </article>
+        <article class="preview-review-box">
+          <h2>Zámek v oblacích</h2>
+          <p class="date">4. 2. 2023</p>
+          <img style="object-position: 50% 90%" class="preview-review-image" src="fotky/howls-moving-castle.webp" alt="">
+          <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+          <p class="review-preview">Howl's Moving Castle je čarokrásnym a dojemným príbehom o nežnej, ale prekliatej láske. Film je vyskladaný z paralel a kontrastov, stačí sa pozrieť len na hlavné dve postavy...</p>
+          <a class="review-link" href="Filmy/howlsmovingcastle.html#full-width-section">Celá recenze zde.</a>
+        </article>
+        <article class="preview-review-box">
+          <h2>Prci, prci, prcičky: Nahá Míle</h2>
+          <p class="date">29. 1. 2023</p>
+          <img style="object-position: 0% 15%" class="preview-review-image" src="fotky/nahamile.webp" alt="">
+          <p class="rating">&#9733;&#9734;&#9734;&#9734;&#9734;</p>
+          <p class="review-preview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sed assumenda cumque ea nobis sapiente, totam possimus aperiam atque illo explicabo vel eius, aliquam earum.</p>
+          <a class="review-link" href="Filmy/nahamile.html#full-width-section">Celá recenze zde.</a>
+        </article>
+        <article class="preview-review-box">
+          <h2>Dobrý Will Hunting</h2>
+          <p class="date">27. 1. 2023</p>
+          <img style="object-position: 50% 10%" class="preview-review-image" src="fotky/goodwillhunting.webp" alt="">
+          <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+          <p class="review-preview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sed assumenda cumque ea nobis sapiente, totam possimus aperiam atque illo explicabo vel eius, aliquam earum.</p>
+          <a class="review-link" href="Filmy/goodwillhunting.html#full-width-section">Celá recenze zde.</a>
+        </article>
+        <article class="preview-review-box">
+          <h2>Na Nože</h2>
+          <p class="date">26. 1. 2023</p>
+          <img style="object-position: 50% 0%" class="preview-review-image" src="fotky/knivesout.webp" alt="">
+          <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p class="review-preview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sed assumenda cumque ea nobis sapiente, totam possimus aperiam atque illo explicabo vel eius, aliquam earum.</p>
+          <a class="review-link" href="Filmy/knivesout.html#full-width-section">Celá recenze zde.</a>
+        </article>
+        <article class="preview-review-box">
+          <h2>Soumrak Mrtvých</h2>
+          <p class="date">15. 1. 2023</p>
+          <img style="object-position: 50% 10%" class="preview-review-image" src="fotky/shaunofthedead.webp" alt="">
+          <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+          <p class="review-preview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sed assumenda cumque ea nobis sapiente, totam possimus aperiam atque illo explicabo vel eius, aliquam earum.</p>
+          <a class="review-link" href="Filmy/shaunofthedead.html#full-width-section">Celá recenze zde.</a>
+        </article>
+        <article class="preview-review-box">
+          <h2>Scott Pilgrim proti zbytku světa</h2>
+          <p class="date">8. 1. 2023</p>
+          <img style="object-position: 50% 33%" class="preview-review-image" src="fotky/scottpilgrim.webp" alt="">
+          <p class="rating">&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+          <p class="review-preview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sed assumenda cumque ea nobis sapiente, totam possimus aperiam atque illo explicabo vel eius, aliquam earum.</p>
+          <a class="review-link" href="Filmy/scottpilgrim.html#full-width-section">Celá recenze zde.</a>
+        </article>
+        <article class="preview-review-box">
+          <h2>Týpci a zbraně</h2>
+          <p class="date">2. 1. 2023</p>
+          <img class="preview-review-image" src="fotky/wardogs.webp" alt="">
+          <p class="rating">&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+          <p class="review-preview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sed assumenda cumque ea nobis sapiente, totam possimus aperiam atque illo explicabo vel eius, aliquam earum.</p>
+          <a class="review-link" href="Filmy/wardogs.html#full-width-section">Celá recenze zde.</a>
+        </article>
+        <article class="preview-review-box">
+          <h2>Road Trip</h2>
+          <p class="date">1. 1. 2023</p>
+          <img style="object-position: 50% 90%" class="preview-review-image" src="fotky/roadtrip.webp" alt="">
+          <p class="rating">&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+          <p class="review-preview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sed assumenda cumque ea nobis sapiente, totam possimus aperiam atque illo explicabo vel eius, aliquam earum.</p>
+          <a class="review-link" href="Filmy/roadtrip.html#full-width-section">Celá recenze zde.</a>
+        </article>
+        <article class="preview-review-box">
+          <h2>Na nože: Glass Onion</h2>
+          <p class="date">25. 12. 2022</p>
+          <img style="object-position: 0% 10%" class="preview-review-image" src="fotky/glassonion.webp" alt="">
+          <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+          <p class="review-preview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sed assumenda cumque ea nobis sapiente, totam possimus aperiam atque illo explicabo vel eius, aliquam earum.</p>
+          <a class="review-link" href="Filmy/glassonion.html#full-width-section">Celá recenze zde.</a>
+        </article>
+        <article class="preview-review-box">
+          <h2>Klaus</h2>
+          <p class="date">22. 12. 2022</p>
+          <img class="preview-review-image" src="fotky/klaus.webp" alt="">
+          <p class="rating">&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+          <p class="review-preview">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sed assumenda cumque ea nobis sapiente, totam possimus aperiam atque illo explicabo vel eius, aliquam earum.</p>
+          <a class="review-link" href="Filmy/klaus.html#full-width-section">Celá recenze zde.</a>
+        </article>
+      </section>
+      <aside>
+          <h1 class="featured" style="font-size: 2rem;">Rozkoukáno:</h1>
+          <section class="articles">
+            <div class="article-box">
+              <h2 class="article-name">Poslední z nás</h2>
+              <img class="article-img-preview" src="fotky/thelastofus.webp" alt="The Last Of Us">
+            </div>
+          </section>
+      </aside>
+    </div>
+  </div>
+  <footer>
+    <p>&#169; Jan Štefáček 2023</p>
+  </footer>
+</body>
+</html>

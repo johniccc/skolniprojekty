@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kill Film - hodnocení filmů a seriálů</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo-box">
+        <a href="index.html"><img class="logo" src="logo.svg" alt="logo"></a>
+      </div>
+      <nav id="nav">
+        <div class="dropdown">
+          <a href="javascript:void(0);" onclick="dropdown1()" class="dropdown-trigger">
+            <p>Filmy</p>
+          </a>
+          <div class="dropdown-content" id="dropdown-content1">
+            <a href="recenze-filmy.html#page-name">
+              <p class="dropdown-item">Recenze</p>
+            </a>
+            <a href="seznam-filmy.html#movie-list">
+              <p class="dropdown-item">Seznam zhlédnutých</p>
+            </a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="javascript:void(0);" onclick="dropdown2()" class="dropdown-trigger">
+            <p>Seriály</p>
+          </a>
+          <div class="dropdown-content" id="dropdown-content2">
+            <a href="recenze-serialy.html#page-name">
+              <p class="dropdown-item">Recenze</p>
+            </a>
+            <a href="seznam-serialy.html#movie-list">
+              <p class="dropdown-item">Seznam zhlédnutých</p>
+            </a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="javascript:void(0);" onclick="dropdown3()" class="dropdown-trigger">
+            <p>Top 10</p>
+          </a>
+          <div class="dropdown-content" id="dropdown-content3">
+            <a href="zebricek-filmy.html#ranking">
+              <p class="dropdown-item">Filmy</p>
+            </a>
+            <a href="zebricek-serialy.html#ranking">
+              <p class="dropdown-item">Seriály</p>
+            </a>
+          </div>
+        </div>
+        <a href="navrhy.html#suggestion-form" class="other-nav">Návrhy</a>
+        <a href="o-mne.html#about-me" class="other-nav">O mně</a>
+      </nav>
+    </header>
+    <section class="ranking" id="ranking">
+      <div class="rank-box">
+        <h2 class="placement">10. místo</h2>
+        <img class="preview-review-image" style="object-position: 50% 10%" src="fotky/woodstock99.webp" alt="">
+        <h2 class="rank-name">Když se všechno po*ere: Woodstock 99</h2>
+        <a class="review-link" href="Serialy/woodstock99.html#full-width-section">Celá recenze zde.</a>
+      </div>
+      <div class="rank-box">
+        <h2 class="placement">9. místo</h2>
+        <img class="preview-review-image" src="fotky/arcane.webp" alt="">
+        <h2 class="rank-name">Arcane</h2>
+        <a class="review-link" href="Serialy/arcane.html#full-width-section">Celá recenze zde.</a>
+      </div>
+      <div class="rank-box">
+        <h2 class="placement">8. místo</h2>
+        <img class="preview-review-image" style="object-position: 50% 100%" src="fotky/squidgame.webp" alt="">
+        <h2 class="rank-name">Squid Game</h2>
+        <a class="review-link" href="Serialy/squidgame.html#full-width-section">Celá recenze zde.</a>
+      </div>
+      <div class="rank-box">
+        <h2 class="placement">7. místo</h2>
+        <img class="preview-review-image" style="object-position: 50% 90%" src="fotky/rickandmorty.webp" alt="">
+        <h2 class="rank-name">Rick and Morty</h2>
+        <a class="review-link" href="Serialy/rickandmorty.html#full-width-section">Celá recenze zde.</a>
+      </div>
+      <div class="rank-box">
+        <h2 class="placement">6. místo</h2>
+        <img class="preview-review-image" style="object-position: 50% 0%" src="fotky/peakyblinders.webp" alt="">
+        <h2 class="rank-name">Gangy z Birminghamu</h2>
+        <a class="review-link" href="Serialy/peakyblinders.html#full-width-section">Celá recenze zde.</a>
+      </div>
+      <div class="rank-box">
+        <h2 class="placement">5. místo</h2>
+        <img class="preview-review-image" style="object-position: 50% 30%" src="fotky/mrrobot.webp" alt="">
+        <h2 class="rank-name">Mr. Robot</h2>
+        <a class="review-link" href="Serialy/mrrobot.html#full-width-section">Celá recenze zde.</a>
+      </div>
+      <div class="rank-box">
+        <h2 class="placement">4. místo</h2>
+        <img class="preview-review-image" style="object-position: 50% 90%" src="fotky/bojackhorseman.webp" alt="">
+        <h2 class="rank-name">Bojack Horseman</h2>
+        <a class="review-link" href="Serialy/bojackhorseman.html#full-width-section">Celá recenze zde.</a>
+      </div>
+      <div class="rank-box">
+        <h2 class="placement">3. místo</h2>
+        <img class="preview-review-image" style="object-position: 50% 40%" src="fotky/strangerthings.webp" alt="">
+        <h2 class="rank-name">Stranger Things</h2>
+        <a class="review-link" href="Serialy/strangerthings.html#full-width-section">Celá recenze zde.</a>
+      </div>
+      <div class="rank-box">
+        <h2 class="placement">2. místo</h2>
+        <img class="preview-review-image" style="object-position: 50% 0%" src="fotky/bettercaulsaul.webp" alt="">
+        <h2 class="rank-name">Volejte Saulovi</h2>
+        <a class="review-link" href="Serialy/bettercaulsaul.html#full-width-section">Celá recenze zde.</a>
+      </div>
+      <div class="rank-box" id="first-place">
+        <h2 class="placement">1. místo</h2>
+        <img class="preview-review-image" style="object-position: 50% 0%" src="fotky/breakingbad.webp" alt="">
+        <h2 class="rank-name">Perníkový Táta</h2>
+        <a class="review-link" href="Serialy/breakingbad.html#full-width-section">Celá recenze zde.</a>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p>&#169; Jan Štefáček 2023</p>
+  </footer>
+</body>
