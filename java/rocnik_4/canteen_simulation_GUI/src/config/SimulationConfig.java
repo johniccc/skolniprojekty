@@ -3,7 +3,7 @@ package config;
 public class SimulationConfig {
   private final int SIMULATION_DURATION = 20 * 1000; // 20 seconds in milliseconds
 
-  private final int CUSTOMER_GENERATION_INTERVAL = 1000; // 1 second in milliseconds
+  private final int CUSTOMER_GENERATION_INTERVAL = 100; // 1 second in milliseconds
 
   private final int MAX_SEATS = 20;
   private final int QUEUE_COUNT = 1; // NOT IMPLEMENTED YET
