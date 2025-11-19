@@ -15,6 +15,10 @@ public class SimulationFrame extends JFrame {
     private JButton startButton;
     private JButton stopButton;
 
+    // Sizes and layout
+    private int buttonWidth = 200;
+    private int buttonHeight = 40;
+
     public SimulationFrame(CanteenSimulation simulation) {
         this.simulation = simulation;
 
@@ -30,38 +34,21 @@ public class SimulationFrame extends JFrame {
     }
 
     private void initComponents() {
-        // Získání SeatManager a seznamu seats pomocí reflexe
-        SeatManager seatManager = null;
-        List<Seat> seats = new ArrayList<>();
+        SeatManager seatManager = simulation.getSeatManager();
+        List<Seat> seats = seatManager.getSeats();
 
-        try {
-            Field seatManagerField = simulation.getClass().getDeclaredField("seatManager");
-            seatManagerField.setAccessible(true);
-            seatManager = (SeatManager) seatManagerField.get(simulation);
-
-            Field seatsField = seatManager.getClass().getDeclaredField("seats");
-            seatsField.setAccessible(true);
-            seats = (List<Seat>) seatsField.get(seatManager);
-        } catch (Exception e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(this,
-                    "Chyba při inicializaci GUI: " + e.getMessage(),
-                    "Chyba",
-                    JOptionPane.ERROR_MESSAGE);
-        }
-
-        // Hlavní panel se simulací
+        // Main simulation panel
         simulationPanel = new SimulationPanel(simulation, seatManager, seats);
         add(simulationPanel, BorderLayout.CENTER);
 
-        // Dolní panel s ovládacími tlačítky
+        // Bottom control panel
         JPanel controlPanel = new JPanel();
         controlPanel.setBackground(new Color(250, 250, 250));
         controlPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         startButton = new JButton("Spustit simulaci");
         startButton.setFont(new Font("Arial", Font.BOLD, 14));
-        startButton.setPreferredSize(new Dimension(150, 40));
+        startButton.setPreferredSize(new Dimension(buttonWidth, buttonHeight));
         startButton.setBackground(new Color(76, 175, 80));
         startButton.setForeground(Color.WHITE);
         startButton.setFocusPainted(false);
@@ -69,21 +56,19 @@ public class SimulationFrame extends JFrame {
 
         stopButton = new JButton("Zastavit simulaci");
         stopButton.setFont(new Font("Arial", Font.BOLD, 14));
-        stopButton.setPreferredSize(new Dimension(150, 40));
+        stopButton.setPreferredSize(new Dimension(buttonWidth, buttonHeight));
         stopButton.setBackground(new Color(244, 67, 54));
         stopButton.setForeground(Color.WHITE);
         stopButton.setFocusPainted(false);
         stopButton.setEnabled(false);
-        stopButton.addActionListener(e -> stopSimulation());
-
-        JLabel infoLabel = new JLabel("  |  Efektivní vytížení: 60-85%");
-        infoLabel.setFont(new Font("Arial", Font.PLAIN, 12));
-        infoLabel.setForeground(new Color(100, 100, 100));
+        stopButton.addActionListener(e -> {
+            stopSimulation();
+            dispose();
+        });
 
         controlPanel.add(startButton);
         controlPanel.add(Box.createHorizontalStrut(20));
         controlPanel.add(stopButton);
-        controlPanel.add(infoLabel);
 
         add(controlPanel, BorderLayout.SOUTH);
     }

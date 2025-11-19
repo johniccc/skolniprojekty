@@ -35,4 +35,8 @@ public class SeatManager {
       seat.join();
     }
   }
+
+  public List<Seat> getSeats() {
+    return seats;
+  }
 }

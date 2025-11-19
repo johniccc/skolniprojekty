@@ -74,6 +74,10 @@ public class CanteenSimulation {
     return statsManager;
   }
 
+  public SeatManager getSeatManager() {
+    return seatManager;
+  }
+
   public SimulationConfig getConfig() {
     return config;
   }

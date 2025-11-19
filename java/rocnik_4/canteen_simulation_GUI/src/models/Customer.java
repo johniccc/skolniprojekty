@@ -43,6 +43,10 @@ public class Customer {
     this.totalDuration = this.soupDuration + this.mainCourseDuration + this.dessertDuration;
   }
 
+  public int getId() {
+    return this.id;
+  }
+
   public boolean hasSoup() {
     return this.hasSoup;
   }

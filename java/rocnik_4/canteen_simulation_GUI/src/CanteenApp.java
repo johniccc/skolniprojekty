@@ -8,7 +8,7 @@ public class CanteenApp {
         SimulationConfig config = new SimulationConfig();
         CanteenSimulation simulation = new CanteenSimulation(config);
 
-        // Spuštění GUI na Event Dispatch Thread
+        // Start GUI on EDT
         SwingUtilities.invokeLater(() -> {
             SimulationFrame frame = new SimulationFrame(simulation);
             frame.setVisible(true);
